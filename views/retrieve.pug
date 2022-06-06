@@ -1,0 +1,37 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Refactory Students in the database
+    link(rel="stylesheet", href="/code.css")
+    link(rel="stylesheet", href="/bootstrap/css/bootstrap.min.css")
+  body.bstyle
+    h1.heading-text Refactory Students Table
+    form.text-white(action="/studentstable", method="post")
+      .row
+        .col-2
+        .col-8
+          table.table
+            thead
+              tr
+                th(scope="col") First Name
+                th(scope="col") Last Name
+                th(scope="col") Email
+                th(scope="col") Tel
+                th(scope="col") Address 
+                th(scope="col") Cohort
+            tbody 
+              if indexs.length
+              each index in indexs
+               tr
+                td(scope="col") #{index.firstname}
+                td(scope="col") #{index.lastname}
+                td(scope="col") #{index.email}
+                td(scope="col") #{index.tel}
+                td(scope="col") #{index.address}
+                td(scope="col") #{index.cohort}
+
+        .col-2
+    script(src='/bootstrap/js/bootstrap.min.js')

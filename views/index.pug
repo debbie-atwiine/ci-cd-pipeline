@@ -1,0 +1,64 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Students&apos; Registration
+    link(rel="stylesheet", href="/code.css")
+    link(rel="stylesheet", href="/bootstrap/css/bootstrap.min.css")
+  body
+    .row
+      .col-3
+      .col-6
+        form(action='/index' method='POST')
+          h1
+            strong.text-white REFACTORY STUDENTS&apos; REGISTRATION FORM
+          .row
+            .form-group.col-md-11
+              label(for="firstname")
+                b First Name
+              input#firstname0.form-control(type="text", name="firstname", placeholder="Students' firstname")
+          .row
+            .form-group.col-md-11
+              label(for="lastname")
+                b Last Name
+              input#lastname0.form-control(type="text", name="lastname", placeholder="Students' lastname")
+          .row
+            .form-group.col-md-11
+              label(for="email")
+                b Email
+              input#email0.form-control(type="email", name="email", placeholder="Students' email")
+          .row
+            .form-group.col-md-11
+              label(for="tel")
+                b Telephone Number
+              input#tel0.form-control(type="text", name="tel", placeholder="Enter telephone number")
+          .row
+            .form-group.col-md-11
+              label(for="address")
+                b Address
+              input#address0.form-control(type="text", name="address", placeholder="Enter address")
+          .row
+            .form-group.col-md-11
+              label(for="cohort")
+                b Cohort
+              select.form-control(name="cohort", autofocus)
+                option(value="Default", selected="") Select Cohort
+                option(value="one") 1
+                option(value="two") 2
+                option(value="three") 3
+                option(value="four") 4
+                option(value="five") 5
+                option(value="six") 6
+                option(value="seven") 7
+                option(value="eight") 8
+                option(value="nine") 9
+                option(value="ten") 10
+          br
+          .row
+            .col-6
+              button.btn.btn-primary(type="submit") Submit
+            .col-6
+      .col-3
+    script(src="/bootstrap/js/bootstrap.min.js")

@@ -1,0 +1,42 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title SignUp Page
+    link(rel="stylesheet", href="/code.css")
+    link(rel="stylesheet", href="/bootstrap/css/bootstrap.min.css")
+  body
+    .row
+      .col-3
+      .col-6
+        form.fstyle(action='/signup' method='POST' onsubmit='return validatedForm()')
+          h1
+            strong.text-white Refactory Admin SignUp
+          .row
+            .form-group.col-md-6.text-white
+              label(for="username") Username
+              input#username0.form-control(type="text", name="username", placeholder="Please enter your username")
+              span#username0Error
+            .form-group.col-md-6.text-white
+              label(for="email") Email
+              input#email0.form-control(type="email", name="email", placeholder="Enter your username")
+              span#email0Error
+          .row
+            .form-group.col-md-6.text-white
+              label(for="password") Password
+              input#password1.form-control(type="password", name="password", placeholder="Enter your password")
+              span#password1Error
+            .form-group.col-md-6.text-white
+              label(for="confirmpassword") Confirm Password
+              input#password2.form-control(type="password", name="password2", placeholder="Confirm your password")
+              span#password2Error
+          .form-group.text-blue
+            .form-check
+              input#gridCheck.form-check-input(type="checkbox", name="gridcheck")
+              label.form-check-label(for="gridCheck")
+                | Remember Me
+          button.btn.btn-primary.width-100px(type="submit") Sign in
+      .col-3
+script(src='/validations/signupVal.js')
